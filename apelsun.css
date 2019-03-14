@@ -1,0 +1,272 @@
+@font-face {
+  font-family: GothamPro;
+  src: url(fonts/GothaProBla.woff);
+}
+
+
+
+@keyframes active{
+	0%{flex:20vw; background:#1d1d1d;}
+	100%{flex:40vw; background:#fff;}
+}
+@keyframes inactive{
+	0%{flex:40vw; background:#fff;}
+	100%{flex:20vw; background:#1d1d1d;}
+}
+
+*{	margin: 0;
+	padding: 0;
+	font-family: GothamPro;
+	}
+
+ul {list-style: none}
+
+li::before {content: "•"; 
+  color: blue;
+  display: inline-block; 
+  width: 1vw;
+  margin-left: -1vw;
+}
+
+
+.offers{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	width:100vw;
+	margin-bottom:4.51vw;
+	overflow:hidden;
+	text-align:center;
+}
+.accordion{
+	position:relative;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	width:110vw;
+	text-align:center;
+	background-color: #1d1d1d;
+}
+
+
+
+
+
+.item{
+	flex:20vw;
+	position:relative;
+	height:35.52vw;
+	border:1px solid #fff;
+	cursor:pointer;
+	border:none;
+	transform: skewX(-15deg);
+	overflow:hidden;
+	background:#1d1d1d;
+	}
+
+
+.label{
+	z-index:2;
+	position:absolute;
+	top: 15vw;
+	font-size:4.01vw;
+	color:#808080;
+	transform: skewX(15deg) rotate(-75deg);
+}
+
+
+.item3 p{
+	left: -7vw;
+}
+.item4 p{
+	left: -3vw;
+}
+.item5 p{
+	left: -5vw;
+}
+
+.item img{
+	position:relative;
+	transform: skewX(15deg);
+	opacity:0.32;
+	width:90vw;
+	height:62.50vw;
+}
+.acc_img1{
+	left:-30vw;
+}
+.acc_img2{
+	left:-20vw;
+	top:-10vw;
+}
+.acc_img3{
+	left:-20vw;
+}
+.acc_img4{
+	left:-30vw;
+	top:-8vw;
+}
+.acc_img5{
+	left:-55vw;
+	top:-15vw;
+}
+
+
+
+
+
+.accordion_content{
+	position:absolute;
+	top:0vw;
+	left:8vw;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	height:35.52vw;
+	width:24.27vw;
+	color:black;
+	z-index:3;
+	transform:skewX(15deg);
+	text-align:left;
+}
+
+.item:nth-child(5) .accordion_content{
+	left:5vw;
+}
+
+.accordion_content h2{
+	font-size: 2.60vw;
+	font-weight: 200;
+	margin-bottom: 2.60vw;
+}
+
+.accordion_content p{
+	font-family: 'Roboto', sans-serif;
+	font-size:0.83vw;
+	font-weight:bold;
+	line-height: 1.72vw;
+	margin-bottom: 0.89vw;
+}
+.accordion_content ul{
+	margin-bottom: 0.89vw;
+}
+.accordion_content ul li{
+	font-family: 'Roboto', sans-serif;
+	font-size:0.83vw;
+	font-weight:200;
+	line-height: 1.72vw;
+}
+
+.active{	
+	animation: active 1s;
+	animation-fill-mode: forwards; 
+	}
+.passive{
+	animation: inactive 1s;
+	animation-fill-mode: forwards; 
+	}
+}
+.active img{
+	opacity:0.1;
+}
+.active p{
+	left:0;
+}
+
+.hidden{
+	opacity:0;
+}
+
+.feedback_wrapper{
+	width:100vw;
+	margin-bottom:5.26vw;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:top;
+}
+
+.feedback_info{
+	display:flex;
+	flex-direction:column;
+	align-items:left;
+	width:21.05vw;
+	margin-right:2.63vw;
+	padding-top:1.26vw;
+}
+.feedback_info h2{
+	margin-bottom:2.37vw;
+	font-size:2.63vw;
+}
+.feedback_info p{
+	margin-bottom:2.37vw;
+	font-size:0.95vw;
+	line-height:1.74vw;
+	font-family: Roboto;
+	font-weight:400;
+}
+.feedback_info span{
+	font-weight:bold;
+}
+.feedback_info button{
+	width:12.63vw;
+	padding: 1.05vw 2.11vw 1.05vw 2.11vw;
+	border:none;
+	font-family:GothamPro;
+	font-size:0.74vw;
+	line-height:1.37vw;
+	background: #1c7fff;
+	color:white;
+	cursor:pointer;
+}
+
+.feedback_logotypes{
+	display:flex;
+	flex-direction:row;
+	align-items:space-between;
+	flex-wrap:wrap;
+	width:42.95vw;
+}
+.feedback_logotypes_client_logo{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	width:14.30vw;
+}
+.feedback_logotypes_client_logo:nth-child(1) img{
+	width:9.47vw;
+	height:2.79vw;
+	}
+.feedback_logotypes_client_logo:nth-child(2) img{
+	width:6.21vw;
+	height:2.63vw;
+}
+.feedback_logotypes_client_logo:nth-child(3) img{
+	width:7.26vw;
+	height:2.00vw;
+}
+.feedback_logotypes_client_logo:nth-child(4) img{
+	width:3.63vw;
+	height:4.74vw;
+}
+.feedback_logotypes_client_logo:nth-child(5) img{
+	width:7.58vw;
+	height:1.00vw;
+}
+.feedback_logotypes_client_logo:nth-child(6) img{
+	width:6.79vw;
+	height:1.74vw;
+}
+.feedback_logotypes_client_logo:nth-child(7) img{
+	width:6.11vw;
+	height:3.58vw;
+}
+.feedback_logotypes_client_logo:nth-child(8) img{
+	width:3.89vw;
+	height:3.89vw;
+}
+.feedback_logotypes_client_logo:nth-child(9) img{
+	width:9.16vw;
+	height:2.26vw;
+}
