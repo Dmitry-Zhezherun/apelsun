@@ -1,9 +1,9 @@
 
 <!DOCTYPE html>
-<head>
-	<html>
+<html>
 <head>
   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="apelsun.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -19,7 +19,7 @@
 	<div class="item item1 #it1"><p class="label l1">Агротехника</p>
 		<img class="acc_img1" src="img/dozer.png">
 		<div class="accordion_content ac1 hidden">
-			<h2>Грузоперевозки</h2>
+			<h2>Агротехника</h2>
 			<p>Цели и предполагаемые задачи внедрения:</p>
 			<ul>
 				<li>Контроль местоположения и состояния автомобиля в Украине и за её пределами</li>
@@ -40,7 +40,7 @@
 <div class="item item2 #it2"><p class="label l2">Легковой транспорт</p>
 <img class="acc_img2" src="img/auto.png">
 	<div class="accordion_content ac2 hidden">
-	<h2>Грузоперевозки</h2>
+	<h2>Легковой транспорт</h2>
 	<p>Цели и предполагаемые задачи внедрения:</p>
 	<ul>
 		<li>Контроль местоположения и состояния автомобиля в Украине и за её пределами</li>
@@ -79,9 +79,9 @@
 
 
 <div class="item item4 #it4"><p class="label l4">Спецтехника</p>
-<img class="acc_img4"src="img/crane.png">
+<img class="acc_img4" src="img/crane.png">
 	<div class="accordion_content ac4 hidden">
-	<h2>Грузоперевозки</h2>
+	<h2>Спецтехника</h2>
 	<p>Цели и предполагаемые задачи внедрения:</p>
 	<ul>
 		<li>Контроль местоположения и состояния автомобиля в Украине и за её пределами</li>
@@ -103,7 +103,7 @@
 <img class="acc_img5" src="img/train.png">
 
 <div class="accordion_content ac5 hidden">
-	<h2>Грузоперевозки</h2>
+	<h2>ЖД транспорт</h2>
 	<p>Цели и предполагаемые задачи внедрения:</p>
 	<ul>
 		<li>Контроль местоположения и состояния автомобиля в Украине и за её пределами</li>
@@ -134,7 +134,7 @@
 			<p>Сотрудничество с нашей
 				Компанией поможет
 				<span>снизить затраты на 5-25%</span> общего годового бюджета затрат на автотранспорт.</p>
-				<button type="button" class="feedback_info_read_btn">читать все отзывы</button>
+				<button type="button" class="feedback_info_read_btn desk-btn">читать все отзывы</button>
 		</div>
 		<div class="feedback_logotypes">
 			<a href="#" class="feedback_logotypes_client_logo">
@@ -174,137 +174,47 @@
 			</a>
 		</div>
 	</div>
+	<div class="tablet_feedback_button_container">
+		<button type="button" class="feedback_info_read_btn tab-btn">смотреть все отзывы</button>
+	</div>
 </section>
 
+<div class="modal_content invisible">
+  <button type="button" class="close-btn">
+  	<img src="img/no.png" class="no-td" alt="Красный крестик"/> 
+  </button>
+ 
+  <h2 class="changeable_header">Грузоперевозки</h2>
+
+      <div class="modal_content_feedback_controls">
+
+        <a href="#">
+          <img src="img/left-arrow.png" class="modal_content_feedback_controls_arrow" alt="Стрелка влево"> 
+        </a>
+
+        <p>
+          Благодаря услугам данной компании я больше не беспокоюсь о состоянии своего автомобиля! Очень удобно иметь полный контроль и владеть всей информацией о своём авто!
+        </p>
+
+        <a href="#">
+          <img src="img/right-arrow.png" class="modal_content_feedback_controls_arrow" alt="Стрелка вправо"> 
+        </a>
+
+      </div>
+
+      <p class="modal_content_name">
+        Николай Петров
+      </p>
+
+      <p class="modal_content_info">
+        25 лет, водитель
+      </p>
+</div>
 
 
 
 
-
-<script> 
-var item = document.getElementsByClassName("item");
-var label = document.getElementsByClassName("label");
-var accont = document.getElementsByClassName("accordion_content");
-document.querySelector('.item1').addEventListener('click',function(event){
-	if(document.querySelector('.item1').classList.contains('active')){
-	document.querySelector('.l1').classList.remove('hidden');
-	document.querySelector('.item1').classList.remove('active');
-	document.querySelector('.item1').classList.add('passive');
-	document.querySelector('.ac1').classList.add('hidden');
-	}
-	else{
-for (i = 0; i < item.length; i++) {
-	if(item[i].classList.contains("active")){
-  item[i].classList.remove("active");
-  item[i].classList.add('passive');
-  label[i].classList.remove("hidden");
-  accont[i].classList.add("hidden");
-}
-}	
-document.querySelector('.l1').classList.add('hidden');
-document.querySelector('.item1').classList.remove('passive');
-document.querySelector('.item1').classList.add('active');
-document.querySelector('.ac1').classList.remove('hidden');
-}
-});
-
-
-document.querySelector('.item2').addEventListener('click',function(event){
-	if(document.querySelector('.item2').classList.contains('active')){
-	document.querySelector('.l2').classList.remove('hidden');
-	document.querySelector('.item2').classList.remove('active');
-	document.querySelector('.item2').classList.add('passive');
-	document.querySelector('.ac2').classList.add('hidden');
-	}
-	else{
-for (i = 0; i < item.length; i++) {
-	if(item[i].classList.contains("active")){
-  item[i].classList.remove("active");
-  item[i].classList.add('passive');
-  label[i].classList.remove("hidden");
-  accont[i].classList.add("hidden");
-}
-}		
-document.querySelector('.l2').classList.add('hidden');
-document.querySelector('.item2').classList.remove('passive');
-document.querySelector('.item2').classList.add('active');
-document.querySelector('.ac2').classList.remove('hidden');
-}
-});
-
-
-document.querySelector('.item3').addEventListener('click',function(event){
-	if(document.querySelector('.item3').classList.contains('active')){
-	document.querySelector('.l3').classList.remove('hidden');
-	document.querySelector('.item3').classList.remove('active');
-	document.querySelector('.item3').classList.add('passive');
-	document.querySelector('.ac3').classList.add('hidden');
-	}
-	else{
-for (i = 0; i < item.length; i++) {
-	if(item[i].classList.contains("active")){
-  item[i].classList.remove("active");
-  item[i].classList.add('passive');
-  label[i].classList.remove("hidden");
-  accont[i].classList.add("hidden");
-}
-}		
-document.querySelector('.l3').classList.add('hidden');
-document.querySelector('.item3').classList.remove('passive');
-document.querySelector('.item3').classList.add('active');
-document.querySelector('.ac3').classList.remove('hidden');
-}
-});
-
-
-document.querySelector('.item4').addEventListener('click',function(event){
-	if(document.querySelector('.item4').classList.contains('active')){
-	document.querySelector('.l4').classList.remove('hidden');
-	document.querySelector('.item4').classList.remove('active');
-	document.querySelector('.item4').classList.add('passive');
-	document.querySelector('.ac4').classList.add('hidden');
-	}
-	else{
-for (i = 0; i < item.length; i++) {
-	if(item[i].classList.contains("active")){
-  item[i].classList.remove("active");
-  item[i].classList.add('passive');
-  label[i].classList.remove("hidden");
-  accont[i].classList.add("hidden");
-}
-}		
-document.querySelector('.l4').classList.add('hidden');
-document.querySelector('.item4').classList.remove('passive');
-document.querySelector('.item4').classList.add('active');
-document.querySelector('.ac4').classList.remove('hidden');
-}
-});
-
-
-document.querySelector('.item5').addEventListener('click',function(event){
-	if(document.querySelector('.item5').classList.contains('active')){
-	document.querySelector('.l5').classList.remove('hidden');
-	document.querySelector('.item5').classList.remove('active');
-	document.querySelector('.item5').classList.add('passive');
-	document.querySelector('.ac5').classList.add('hidden');
-	}
-	else{
-for (i = 0; i < item.length; i++) {
-	if(item[i].classList.contains("active")){
-  item[i].classList.remove("active");
-  item[i].classList.add('passive');
-  label[i].classList.remove("hidden");
-  accont[i].classList.add("hidden");
-}
-}		
-document.querySelector('.l5').classList.add('hidden');
-document.querySelector('.item5').classList.remove('passive');
-document.querySelector('.item5').classList.add('active');
-document.querySelector('.ac5').classList.remove('hidden');
-}
-
-});
-</script> 
+<script src="js/apelsun.js"></script> 
 </body>
 
 
