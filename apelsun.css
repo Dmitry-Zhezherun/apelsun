@@ -290,7 +290,7 @@ li::before {
 @media (max-width: 320px){
 	.acc_img5{
 	left:-125vw;
-	top:-105vw;
+	top:-80vw;
 	}
 }
 
@@ -347,7 +347,9 @@ li::before {
 .accordion_content h2{
 	font-size: 7.50vw;
 	margin-bottom: 8.75vw;
-	margin-left:13vw;
+	margin-left:-5vw;
+	width: 100vw;
+	text-align:center;
 	}
 }
 .accordion_content p{
